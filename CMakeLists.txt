@@ -43,6 +43,7 @@ if(NOT WIN32)
 endif()
 
 if(WIN32)
+  add_definitions(-D_WIN32)
   set(time_impl_c src/time_win32.c)
 else()
   set(time_impl_c src/time_unix.c)
