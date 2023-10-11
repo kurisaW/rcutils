@@ -25,7 +25,7 @@ extern "C"
 #ifndef _WIN32
 #define RCUTILS_WARN_UNUSED __attribute__((warn_unused_result))
 #else
-#define RCUTILS_WARN_UNUSED _Check_return_
+#define RCUTILS_WARN_UNUSED __declspec(check_return)
 #endif
 
 // Note: this block was migrated from rmw/macros.h
