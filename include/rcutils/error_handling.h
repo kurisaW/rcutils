@@ -33,9 +33,7 @@ extern "C"
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef RCUTILS__ALLOCATOR_H_
 #include "rcutils/allocator.h"
-#endif
 #include "rcutils/macros.h"
 #include "rcutils/snprintf.h"
 #include "rcutils/testing/fault_injection.h"
