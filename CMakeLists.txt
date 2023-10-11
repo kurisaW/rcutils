@@ -46,6 +46,7 @@ if(WIN32)
   add_definitions(-D_WIN32)
   set(time_impl_c src/time_win32.c)
 else()
+  add_definitions(-D__GNU_VISIBLE)
   set(time_impl_c src/time_unix.c)
 endif()
 
