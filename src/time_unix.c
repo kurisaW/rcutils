@@ -36,6 +36,8 @@ extern "C"
 #else
 #include <time.h>
 #endif // ZEPHYR_VERSION_CODE >= ZEPHYR_VERSION(3, 1, 0)
+#elif defined(_POSIX_MONOTONIC_CLOCK)
+#include <time.h>
 #else
 #include <time.h>
 #endif  //  defined(__ZEPHYR__)
