@@ -57,6 +57,11 @@ extern "C"
 
 #define __WOULD_BE_NEGATIVE(seconds, subseconds) (seconds < 0 || (subseconds < 0 && seconds == 0))
 
+struct timespec{
+    long   tv_sec;
+    long   tv_nsec;
+};
+
 rcutils_ret_t
 rcutils_system_time_now(rcutils_time_point_value_t * now)
 {

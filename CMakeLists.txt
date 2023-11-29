@@ -63,7 +63,6 @@ set(rcutils_sources
   src/get_env.c
   src/hash_map.c
   src/logging.c
-  src/process.c
   src/qsort.c
   src/repl_str.c
   src/shared_library.c
@@ -108,7 +107,7 @@ em.invoke( \
 string(REPLACE ";" "$<SEMICOLON>" python_code "${python_code}")
 add_custom_command(OUTPUT include/rcutils/logging_macros.h
   COMMAND ${CMAKE_COMMAND} -E make_directory "include/rcutils"
-  COMMAND ${PYTHON_EXECUTABLE} ARGS -c "${python_code}"
+  COMMAND py -3 ARGS -c "${python_code}"
   DEPENDS
     "${CMAKE_CURRENT_BINARY_DIR}/logging_macros.h.em.watch"
     "${CMAKE_CURRENT_BINARY_DIR}/logging.py.watch"
